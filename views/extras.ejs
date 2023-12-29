@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/extrasUpload" method="post">
+      <label for="dateI">Fecha y hora entrada</label>
+      <input type="datetime-local" id="dateI" name="dateI" required />
+      <label for="dateF">Fecha y hora salida</label>
+      <input type="datetime-local" id="dateF" name="dateF" required />
+      <label for="odt">ODT</label>
+      <input type="number" required name="odt" />
+      <label for="colab">Colaborador</label>
+      <select name="colab" id="colab" multiple required>
+        <% getUsers.forEach(function(user) { %>
+        <option value="<%= user.dataValues.id %>">
+          <%= user.dataValues.name %>
+        </option>
+        <% }); %>
+      </select>
+      <button type="submit">Subir extras</button>
+    </form>
+    <a href="/">back</a>
+  </body>
+</html>
