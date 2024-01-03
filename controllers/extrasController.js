@@ -18,7 +18,7 @@ controller.uploadExtras = (req, res) => {
   const colabs = req.body.colab;
   const horas = (dateF - dateI) / 1000 / 60 / 60;
   const odt = req.body.odt;
-  const listHoliday = Holidays.ge
+  const listHoliday = Holidays.ge;
   console.log(listHoliday);
 
   if (dateI in listHoliday) {

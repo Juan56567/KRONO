@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Permisos</title>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="formContainer">
+        <form action="/offRequest" method="post">
+          <label for="empleado">Solicitante</label>
+          <select name="empleado" id="empleado">
+            <option value="test">test</option>
+          </select>
+          <label for="inicio">Desde</label>
+          <input type="datetime-local" id="inicio" required name="inicio" />
+          <label for="fin">Hasta</label>
+          <input type="datetime-local" id="fin" name="fin" required />
+          <label for="tipo">Tipo de permiso</label>
+          <select name="tipo" id="tipo" required>
+            <option value="remunerado">Remunerado</option>
+            <option value="no remunerado">No remunerado</option>
+          </select>
+          <button type="submit">Subir permiso</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
