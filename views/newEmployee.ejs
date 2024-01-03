@@ -4,17 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/newEmployee.css" />
   </head>
   <body>
-    <h1>Create new employee</h1>
-    <form action="/createEmployee" method="post">
-      <label for="newName">Full name</label>
-      <input type="text" id="newName" name="newName" required />
-      <label for="user">User name</label>
-      <input type="text" id="user" name="user" required />
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
-      <button type="submit">Create</button>
-    </form>
+    <div class="mainContainer">
+      <h1>Nuevo usuario</h1>
+      <div class="formContainer">
+        <form action="/createEmployee" method="post">
+          <input
+            type="text"
+            id="newName"
+            name="newName"
+            required
+            placeholder="Nombre completo"
+          />
+          <input
+            type="text"
+            id="user"
+            name="user"
+            required
+            placeholder="Usuario"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Password"
+          />
+          <div class="buttonsContainer">
+            <button type="submit">Create</button>
+            <button class="rojos" type="reset">Delete</button>
+            <button class="rojos"><a href="/home">Inicio</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

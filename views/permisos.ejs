@@ -4,25 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Permisos</title>
+    <link rel="stylesheet" href="css/permisos.css" />
   </head>
   <body>
     <div class="mainContainer">
+      <h1>Nuevo permiso</h1>
       <div class="formContainer">
         <form action="/offRequest" method="post">
-          <label for="empleado">Solicitante</label>
-          <select name="empleado" id="empleado">
-            <option value="test">test</option>
-          </select>
-          <label for="inicio">Desde</label>
-          <input type="datetime-local" id="inicio" required name="inicio" />
-          <label for="fin">Hasta</label>
-          <input type="datetime-local" id="fin" name="fin" required />
-          <label for="tipo">Tipo de permiso</label>
-          <select name="tipo" id="tipo" required>
-            <option value="remunerado">Remunerado</option>
-            <option value="no remunerado">No remunerado</option>
-          </select>
-          <button type="submit">Subir permiso</button>
+          <div class="filas">
+            <label for="empleado">Solicitante</label>
+            <select name="empleado" id="empleado">
+              <option value="test">test</option>
+            </select>
+          </div>
+          <div class="filas">
+            <label for="inicio">Desde</label>
+            <input type="datetime-local" id="inicio" required name="inicio" />
+          </div>
+          <div class="filas">
+            <label for="fin">Hasta</label>
+            <input type="datetime-local" id="fin" name="fin" required />
+          </div>
+          <div class="filas">
+            <label for="observaciones">Observaciones</label>
+            <input type="text" required />
+          </div>
+          <div class="filas">
+            <label for="tipo">Permiso</label>
+            <select name="tipo" id="tipo" required>
+              <option value="no remunerado">No remunerado</option>
+              <option value="remunerado">Remunerado</option>
+            </select>
+          </div>
+          <div class="filas">
+            <button class="rojos"><a href="/home">Volver a inicio</a></button>
+            <button type="submit">Subir permiso</button>
+          </div>
         </form>
       </div>
     </div>
