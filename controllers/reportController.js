@@ -1,4 +1,4 @@
-const db = require("../models/extrasModel");
+const db = require("../models/timemodel");
 const controller = {};
 
 controller.start = async (req, res) => {
@@ -7,15 +7,11 @@ controller.start = async (req, res) => {
   const year = fecha.getFullYear();
   res.render("report", { month, year });
 
-//   const extras = await db.findAll({
-//     where:{
+  //   const extras = await db.findAll({
+  //     where:{
 
-//     }
-//   })
-
-
-
-
+  //     }
+  //   })
 };
 
 module.exports = controller;

@@ -19,20 +19,9 @@
             <label for="dateF">Salida</label>
             <input type="datetime-local" id="dateF" name="dateF" required />
           </div>
-
           <div class="filas">
             <label for="odt">ODT</label>
             <input type="number" required name="odt" />
-          </div>
-          <div class="filas">
-            <label for="colab">User</label>
-            <select name="colab" id="colab" multiple required>
-              <% getUsers.forEach(function(user) { %>
-              <option value="<%= user.dataValues.id %>">
-                <%= user.dataValues.name %>
-              </option>
-              <% }); %>
-            </select>
           </div>
           <div class="filas">
             <button class="rojos"><a href="/home">Volver a inicio</a></button>

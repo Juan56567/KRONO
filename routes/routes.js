@@ -29,5 +29,6 @@ router.get("/extras", worker.verify, extrasController.viewExtras);
 router.post("/extrasUpload", worker.verify, extrasController.uploadExtras);
 router.get("/showReport", worker.verify, reportController.start);
 router.get("/permisos", worker.verify, permisosController.permisos);
+router.post("/offRequest", worker.verify, permisosController.offrequest);
 
 module.exports = router;
