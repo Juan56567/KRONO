@@ -5,6 +5,7 @@ const password = process.env.password;
 const sequelize = new Sequelize(db, user, password, {
   host: "localhost",
   dialect: "mysql",
+  timezone: "+05:00",
 });
 
 module.exports = sequelize;
